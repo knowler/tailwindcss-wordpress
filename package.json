@@ -1,0 +1,7 @@
+{
+  "name": "tailwind-wordpress",
+  "version": "1.0.0",
+  "description": "Tailwind CSS plugins for WordPress generated classes.",
+  "main": "index.js",
+  "license": "MIT"
+}
