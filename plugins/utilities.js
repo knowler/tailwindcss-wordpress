@@ -1,5 +1,5 @@
 module.exports = ({ addUtilities, config }) => {
-  const { colors, fontSize, margin, screens } = config('theme')
+  const { colors, fontSize, margin, screens } = config('theme');
 
   addUtilities({
     /** Alignment utilities */
@@ -11,16 +11,16 @@ module.exports = ({ addUtilities, config }) => {
     },
     '.aligncenter': {
       display: 'block',
-      margin: `${margin[2]} auto`,
+      margin: `${margin[2] || '0.5rem'} auto`,
     },
-    [`@media (min-width: ${screens.sm})`]: {
+    [`@media (min-width: ${screens.sm || '640px'})`]: {
       '.alignleft': {
         float: 'left',
-        marginRight: margin[2],
+        marginRight: margin[2] || '0.5rem',
       },
       '.alignright': {
         float: 'right',
-        marginLeft: margin[2],
+        marginLeft: margin[2] || '0.5rem',
       },
     },
 
@@ -28,13 +28,13 @@ module.exports = ({ addUtilities, config }) => {
     '.wp-caption': {
       display: 'inline-block',
       '& img': {
-        marginBottom: margin[2],
+        marginBottom: margin[2] || '0.5rem',
         lineHeight: 1,
       },
     },
     '.wp-caption-text': {
-      fontSize: fontSize.sm,
-      color: colors.gray[600],
+      fontSize: fontSize.sm || '0.9rem',
+      color: (colors.gray && colors.gray[600]) || '#718096',
     },
 
     /** Screen reader text */
