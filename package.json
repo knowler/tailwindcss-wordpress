@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-wordpress",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tailwind CSS plugins for WordPress generated classes.",
   "main": "index.js",
   "license": "MIT",
